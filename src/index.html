@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./app.js" defer></script>
+
+    <title>Advice generator app</title>
+  </head>
+  <body class="flex">
+    <main class="flow flex">
+      <div class="advice-container flow flex">
+        <h1>Advice # <span id="advice-id"></span></h1>
+        <blockquote class="fs-advice">
+          <p id="advice-content"></p>
+        </blockquote>
+        <img src="../images/pattern-divider-desktop.svg" alt="Patern divider" />
+        <div class="dice-container flex" id="advice-button">
+          <img src="../images/icon-dice.svg" alt="Dice icon" />
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Coded by <a href="https://calin.codes">Calin.Codes</a>
+    </div>
+  </body>
+</html>
