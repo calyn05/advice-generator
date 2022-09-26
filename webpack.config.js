@@ -10,6 +10,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "[name].bundle.js",
+    clean: true,
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   devtool: "source-map",
   module: {
@@ -27,7 +29,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-
         use: ["style-loader", "css-loader"],
       },
       {
@@ -39,23 +40,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpe?g|gif|ico)$/,
         type: "asset/resource",
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "./dist/images",
-            },
-          },
-        ],
       },
     ],
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "src"),
+      directory: path.resolve(__dirname, "./src"),
     },
     compress: true,
     port: 9000,
@@ -64,7 +56,6 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html",
     }),
     new Dotenv(),
   ],

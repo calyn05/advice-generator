@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="" id="favicon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,26 +13,28 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
       rel="stylesheet"
     />
-
-    <script src="./app.js" defer></script>
+    <script src="./app.js" type="module text/javascript"></script>
 
     <title>Advice generator app</title>
   </head>
   <body class="flex">
+    <button class="back-btn">Back to projects</button>
     <main class="flow flex">
       <div class="advice-container flow flex">
         <h1>Advice # <span id="advice-id"></span></h1>
         <blockquote class="fs-advice">
           <p id="advice-content"></p>
         </blockquote>
-        <img src="../images/pattern-divider-desktop.svg" alt="Patern divider" />
+        <img src="" alt="Patern divider" id="pattern-divider" />
         <div class="dice-container flex" id="advice-button">
-          <img src="../images/icon-dice.svg" alt="Dice icon" />
+          <img src="" alt="Dice icon" id="dice-icon" />
         </div>
       </div>
     </main>
-    <div class="attribution">
-      Coded by <a href="https://calin.codes">Calin.Codes</a>
-    </div>
+    <footer>
+      <p class="attribution">
+        Coded by <a href="https://calin.codes">Calin.Codes</a>
+      </p>
+    </footer>
   </body>
 </html>
